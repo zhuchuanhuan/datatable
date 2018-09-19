@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.js"></script>
+</head>
+<body>
+<table id="example" class="display" style="width:100%">
+    <thead>
+    <tr>
+        <th>Position</th>
+        <th>Salary</th>
+        <th>Office</th>
+        <th>Extn.</th>
+        <th>E-mail</th>
+        <th>E-mail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>$320,800</td>
+        <td>Edinburgh</td>
+        <td>5421</td>
+        <td>t.nixon@datatables.net</td>
+    </tr>
+    <tr>
+        <td>Garrett Winters</td>
+        <td>Accountant</td>
+        <td>$170,750</td>
+        <td>Tokyo</td>
+        <td>8422</td>
+        <td>g.winters@datatables.net</td>
+    </tr>
+    <tr>
+        <td>Ashton Cox</td>
+        <td>Junior Technical Author</td>
+        <td>$86,000</td>
+        <td>San Francisco</td>
+        <td>1562</td>
+        <td>a.cox@datatables.net</td>
+    </tr>
+    <tr>
+        <td>Cedric Kelly</td>
+        <td>Senior Javascript Developer</td>
+        <td>$433,060</td>
+        <td>Edinburgh</td>
+        <td>6224</td>
+        <td>c.kelly@datatables.net</td>
+    </tr>
+    <tr>
+        <td>Airi Satou</td>
+        <td>Accountant</td>
+        <td>$162,700</td>
+        <td>Tokyo</td>
+        <td>5407</td>
+        <td>a.satou@datatables.net</td>
+    </tr>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+        <th>Office</th>
+        <th>Extn.</th>
+        <th>E-mail</th>
+    </tr>
+    </tfoot>
+</table>
+</body>
+<script>
+    $(document).ready(function() {
+        var table = $('#example').DataTable();
+
+        $('#example tbody').on('click', 'tr', function () {
+            var data = table.row( this ).data();
+            alert(data);
+        } );
+    } );
+</script>
+</html>
