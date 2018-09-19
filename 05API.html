@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.js"></script>
+</head>
+<body>
+<table id="example" class="display">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>galary</th>
+        <th>office</th>
+        <th>position</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</body>
+<script>
+    function Employee ( name, position, salary, office ) {
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
+        this._office = office;
+
+        this.office = function () {
+            return this._office;
+        }
+    };
+
+    var table = $('#example').DataTable( {
+        data: [
+            new Employee( "Tiger Nixon", "System Architect", "$3,120", "Edinburgh" ),
+            new Employee( "Garrett Winters", "Director", "$5,300", "Edinburgh" )
+        ],
+        columns: [
+            { data: 'name' },
+            { data: 'salary' },
+            { data: 'office' },
+            { data: 'position' }
+        ],
+    } );
+
+    table.search( 'Fiona' ).draw();
+//      表格（tables）
+//      列（Columns）
+//      行（Rows）
+//      单元格（Cells）
+//      核心方法（Core）
+//      工具类（Utilities
+</script>
+</html>
