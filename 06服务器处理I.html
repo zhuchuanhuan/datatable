@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.js"></script>
+</head>
+<body>
+<table id="example" class="display">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>galary</th>
+        <th>office</th>
+        <th>position</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</body>
+<script>
+
+
+    var table = $('#example').DataTable( {
+        serverSide: true,
+        ajax: {
+            url: '/data-source',
+            type: 'POST'
+        }
+    } );
+
+</script>
+</html>
